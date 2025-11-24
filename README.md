@@ -53,7 +53,7 @@
 
 ### 📚 docs
 - **[MOCs](./docs/MOCs/)**: Map of Content
-- **[claudecodedocs](./docs/claudecodedocs/)**: Claude Code関連ドキュメント
+
 
 ### 🛠 _system
 - **assets**: 画像・デザインアセット
