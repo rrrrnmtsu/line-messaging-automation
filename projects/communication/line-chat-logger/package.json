@@ -1,0 +1,20 @@
+{
+  "name": "line-chat-logger",
+  "version": "1.0.0",
+  "description": "LINE チャットログ自動取得・保存ツール",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": ["line", "chat", "logger", "messaging-api"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@line/bot-sdk": "^9.3.0",
+    "@vercel/postgres": "^0.10.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  }
+}

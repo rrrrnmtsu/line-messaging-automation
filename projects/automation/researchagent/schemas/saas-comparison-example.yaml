@@ -1,0 +1,175 @@
+# SaaSツール比較リサーチ スキーマ定義（サンプル）
+# バージョン: 1.0
+#
+# このファイルは新しいリサーチドメインを追加する際のテンプレートです。
+# 実際に使用する際は、ファイル名から "-example" を削除し、
+# 内容をプロジェクトに合わせてカスタマイズしてください。
+
+# ドメイン情報
+domain: saas_comparison
+version: "1.0"
+description: "SaaSツールの比較・評価スキーマ"
+
+# 検索設定
+search:
+  base_keywords:
+    - "SaaS comparison"
+    - "SaaS tool review"
+    - "software comparison 2024"
+    - "best SaaS tools"
+    - "SaaS vs SaaS"
+  languages:
+    - ja
+    - en
+  result_limit: 5
+
+# データスキーマ（15カラム）
+schema:
+  - name: ID
+    type: string
+    required: true
+    extraction_priority: low
+    description: "3桁ゼロパディング (001, 002, ...)"
+    notion_type: title
+
+  - name: ツール名
+    type: string
+    required: true
+    extraction_priority: high
+    description: "SaaSツール名（製品名）"
+    notion_type: rich_text
+
+  - name: カテゴリ
+    type: select
+    required: true
+    extraction_priority: high
+    description: "ツールカテゴリ"
+    notion_type: select
+    options:
+      - "プロジェクト管理"
+      - "CRM"
+      - "マーケティング"
+      - "会計・経理"
+      - "HR・人事"
+      - "コミュニケーション"
+      - "デザイン・クリエイティブ"
+      - "開発ツール"
+      - "その他"
+
+  - name: サブカテゴリ
+    type: string
+    required: false
+    extraction_priority: medium
+    description: "詳細カテゴリ（例: タスク管理、メール配信等）"
+    notion_type: rich_text
+
+  - name: 価格帯
+    type: string
+    required: true
+    extraction_priority: high
+    description: "月額料金（例: $10-50/user, Free-$99等）"
+    notion_type: rich_text
+
+  - name: 主要機能
+    type: string
+    required: true
+    extraction_priority: high
+    description: "主な機能一覧（箇条書き形式）"
+    notion_type: rich_text
+
+  - name: 対象企業規模
+    type: select
+    required: false
+    extraction_priority: medium
+    description: "適した企業規模"
+    notion_type: select
+    options:
+      - "個人・フリーランス"
+      - "スタートアップ（1-10名）"
+      - "中小企業（10-100名）"
+      - "中堅企業（100-1000名）"
+      - "エンタープライズ（1000名以上）"
+      - "全規模対応"
+
+  - name: 連携可能ツール
+    type: string
+    required: false
+    extraction_priority: medium
+    description: "API連携可能なサービス名（カンマ区切り）"
+    notion_type: rich_text
+
+  - name: 評価スコア
+    type: select
+    required: false
+    extraction_priority: medium
+    description: "総合評価（1-5段階）"
+    notion_type: select
+    options:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+
+  - name: メリット
+    type: string
+    required: true
+    extraction_priority: high
+    description: "主なメリット・強み"
+    notion_type: rich_text
+
+  - name: デメリット
+    type: string
+    required: true
+    extraction_priority: high
+    description: "主なデメリット・弱み"
+    notion_type: rich_text
+
+  - name: ユースケース
+    type: string
+    required: false
+    extraction_priority: medium
+    description: "具体的な活用例"
+    notion_type: rich_text
+
+  - name: 出典URL
+    type: url
+    required: true
+    extraction_priority: low
+    description: "レビュー元・比較記事URL"
+    notion_type: url
+
+  - name: 情報の種類
+    type: select
+    required: true
+    extraction_priority: low
+    description: "情報の信頼性"
+    notion_type: select
+    options:
+      - "公式情報"
+      - "第三者レビュー"
+      - "ユーザーレビュー"
+      - "推定"
+
+  - name: 更新日
+    type: string
+    required: false
+    extraction_priority: low
+    description: "情報更新日（YYYY-MM-DD形式）"
+    notion_type: rich_text
+    format: date
+
+# LLM抽出設定
+extraction:
+  model: "gpt-4o-mini"
+  temperature: 0.3
+  max_tokens: 3000
+  prompt_template_path: "prompts/saas-extraction.txt"
+  retry_attempts: 2
+  timeout_seconds: 90
+
+# Notion連携設定（使用する際は実際のデータベースIDに変更してください）
+notion:
+  database_id: null  # 新しいNotionデータベースIDをここに設定
+  parent_page_id: null
+  database_title: "SaaS比較データベース"

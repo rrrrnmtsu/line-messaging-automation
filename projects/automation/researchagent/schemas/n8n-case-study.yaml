@@ -1,0 +1,264 @@
+# n8n事例リサーチ スキーマ定義
+# バージョン: 1.0
+
+# ドメイン情報
+domain: n8n_case_study
+version: "1.0"
+description: "n8nワークフロー自動化の事例研究スキーマ"
+
+# 検索設定
+search:
+  base_keywords:
+    - "n8n workflow automation"
+    - "n8n 事例"
+    - "n8n use case"
+    - "n8n 自動化"
+    - "n8n 導入事例"
+    - "n8n 成功事例"
+    - "n8n 不動産"
+    - "n8n ホテル"
+    - "n8n 飲食"
+    - "n8n ナイトクラブ"
+    - "n8n 予約 価格 在庫"
+    - "n8n real estate"
+    - "n8n hotel PMS OTA"
+    - "n8n restaurant POS booking"
+    - "n8n nightclub VIP CRM bottle inventory"
+    - "n8n ecommerce shopify woocommerce"
+  languages:
+    - ja
+    - en
+  result_limit: 5
+
+  # 実行パラメータ
+  per_query: 20
+  concurrency: 6
+  timeout: 30000
+
+  # ドメイン設定
+  priority_domains:
+    - "n8n.io"
+    - "community.n8n.io"
+    - "qiita.com"
+    - "zenn.dev"
+    - "note.com"
+    - "github.com"
+    - "medium.com"
+    - "youtube.com"
+    - "reddit.com"
+    - "dev.to"
+    - "hashnode.com"
+
+  blocked_domains:
+    - "spam-site.com"
+    - "low-quality-aggregator.com"
+
+  primary_info_domains:
+    - "n8n.io"
+    - "community.n8n.io"
+    - "qiita.com"
+    - "zenn.dev"
+    - "note.com"
+    - "reddit.com"
+    - "youtube.com"
+    - "github.com"
+
+# データスキーマ（20カラム）
+schema:
+  - name: ID
+    type: string
+    required: true
+    extraction_priority: low
+    description: "3桁ゼロパディング (001, 002, ...)"
+    notion_type: title
+
+  - name: タイトル
+    type: string
+    required: true
+    extraction_priority: high
+    description: "事例名"
+    notion_type: rich_text
+
+  - name: 業種
+    type: select
+    required: true
+    extraction_priority: high
+    description: "業種分類"
+    notion_type: select
+    options:
+      - "不動産"
+      - "ホテル"
+      - "飲食"
+      - "ナイト"
+      - "EC・小売"
+      - "医療・ヘルスケア"
+      - "金融・財務"
+      - "WEBマーケティング"
+      - "IT・ソフトウェア開発"
+      - "物流"
+      - "製造業"
+      - "教育・Eラーニング"
+      - "人材・採用"
+      - "保険"
+      - "その他"
+
+  - name: サブ領域
+    type: string
+    required: false
+    extraction_priority: medium
+    description: "予約管理、在庫管理等"
+    notion_type: rich_text
+
+  - name: 目的/KPI
+    type: string
+    required: true
+    extraction_priority: high
+    description: "定量的な目標・指標"
+    notion_type: rich_text
+
+  - name: トリガー種別
+    type: string
+    required: true
+    extraction_priority: medium
+    description: "Webhook/Cron/API等"
+    notion_type: rich_text
+    allowed_values:
+      - Webhook
+      - Cron
+      - Schedule
+      - IMAP
+      - API
+      - Watch
+      - Event
+      - Polling
+
+  - name: 入力ソース
+    type: string
+    required: true
+    extraction_priority: high
+    description: "データ入力元（SaaS/DB/ファイル）"
+    notion_type: rich_text
+
+  - name: 出力先
+    type: string
+    required: true
+    extraction_priority: high
+    description: "データ出力先（SaaS/DB/通知）"
+    notion_type: rich_text
+
+  - name: 主要n8nノード
+    type: string
+    required: true
+    extraction_priority: high
+    description: "使用されている主要ノード（3-10個）"
+    notion_type: rich_text
+
+  - name: 外部API/連携ツール
+    type: string
+    required: true
+    extraction_priority: high
+    description: "使用される外部サービス・API"
+    notion_type: rich_text
+
+  - name: ワークフロー概要
+    type: string
+    required: true
+    extraction_priority: high
+    description: "処理フローの説明（150字程度）"
+    notion_type: rich_text
+    max_length: 200
+
+  - name: 実装難易度
+    type: select
+    required: true
+    extraction_priority: medium
+    description: "1（簡単）〜5（複雑）"
+    notion_type: select
+    options:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+
+  - name: 規模目安
+    type: string
+    required: false
+    extraction_priority: medium
+    description: "処理頻度・件数・店舗数等"
+    notion_type: rich_text
+
+  - name: 成果/ROI
+    type: string
+    required: true
+    extraction_priority: high
+    description: "定量的な成果（時間削減、コスト削減等）"
+    notion_type: rich_text
+
+  - name: 運用上のリスク/前提
+    type: string
+    required: false
+    extraction_priority: medium
+    description: "認証、レート制限、前提条件等"
+    notion_type: rich_text
+
+  - name: 地域/言語
+    type: select
+    required: true
+    extraction_priority: low
+    description: "対象地域・言語"
+    notion_type: select
+    options:
+      - "JP / 日本語"
+      - "US / English"
+      - "UK / English"
+      - "Global / 多言語"
+      - "不明"
+
+  - name: 出典URL
+    type: url
+    required: true
+    extraction_priority: low
+    description: "事例のURL"
+    notion_type: url
+
+  - name: 情報の種類
+    type: select
+    required: true
+    extraction_priority: low
+    description: "情報の信頼性"
+    notion_type: select
+    options:
+      - "一次情報"
+      - "二次情報"
+      - "推定"
+
+  - name: 公開日/更新日
+    type: string
+    required: false
+    extraction_priority: low
+    description: "YYYY-MM-DD形式"
+    notion_type: rich_text
+    format: date
+
+  - name: 重複判定キー
+    type: string
+    required: true
+    extraction_priority: low
+    description: "ユニークキー（組織/製品/ユースケース/出典ドメイン）"
+    notion_type: rich_text
+
+# LLM抽出設定
+extraction:
+  model: "gpt-4o-mini"
+  temperature: 0.3
+  max_tokens: 4000
+  prompt_template_path: "prompts/n8n-extraction.txt"
+  retry_attempts: 2
+  timeout_seconds: 120
+
+# Notion連携設定（オプション）
+notion:
+  database_id: "29fd6d1146cb81b09ea4db8064663e3f"
+  parent_page_id: null
+  database_title: "n8n事例データベース"

@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+.env.*
+
+# Credentials
+credentials.json
+.token.json
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Reports
+shared/results/

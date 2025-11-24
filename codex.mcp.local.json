@@ -1,0 +1,35 @@
+{
+  "mcpServers": {
+    "bybit": {
+      "command": "node",
+      "args": [
+        "/Users/remma/mcp-sever/bybit-mcp/build/index.js"
+      ],
+      "env": {
+        "BYBIT_API_KEY": "Xtar5ay6N3BWFhH7ur",
+        "BYBIT_API_SECRET": "87ngbKQlGzrCvYbcCnUbf2KVrmLyJsbCqn7V",
+        "BYBIT_USE_TESTNET": "true"
+      }
+    },
+    "google-trends": {
+      "command": "node",
+      "args": [
+        "/Users/remma/google/googletrendapi-mcp/dist/index.js"
+      ],
+      "env": {
+        "GOOGLE_TRENDS_USE_OFFICIAL": "false",
+        "GOOGLE_TRENDS_API_KEY": "",
+        "GOOGLE_TRENDS_API_SECRET": ""
+      }
+    },
+    "notion": {
+      "command": "npx",
+      "args": [
+        "@notionhq/notion-mcp-server"
+      ],
+      "env": {
+        "NOTION_API_KEY": "YOUR_NOTION_API_KEY"
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/webhook",
+      "dest": "/api/webhook.js"
+    },
+    {
+      "src": "/dashboard",
+      "dest": "/api/dashboard.js"
+    },
+    {
+      "src": "/download",
+      "dest": "/api/download.js"
+    },
+    {
+      "src": "/test-auth",
+      "dest": "/api/test-auth.js"
+    }
+  ]
+}

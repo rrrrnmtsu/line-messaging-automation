@@ -1,0 +1,39 @@
+# 認証情報・環境変数
+.env
+config/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# データファイル
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# ログ
+logs/*
+!logs/.gitkeep
+
+# レポート
+reports/*
+!reports/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# テスト
+.coverage
+htmlcov/
+.pytest_cache/

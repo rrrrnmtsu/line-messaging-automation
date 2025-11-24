@@ -1,0 +1,210 @@
+{
+  "main": {
+    "id": "6374c5b0c0662393",
+    "type": "split",
+    "children": [
+      {
+        "id": "610dec9bd0eb65ef",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fc5eaf64b5d23134",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新規タブ"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2aa6e37d0c4278cc",
+    "type": "split",
+    "children": [
+      {
+        "id": "182b86baac1ae4f6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e74252aae8a9de1c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "ファイルエクスプローラ"
+            }
+          },
+          {
+            "id": "c811c11eff499d28",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "検索"
+            }
+          },
+          {
+            "id": "7723c9e4faddc36c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "ブックマーク"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "a336917d67a89574",
+    "type": "split",
+    "children": [
+      {
+        "id": "9b3c76eb4c37c8ca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6449381e830a0aa9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "dify-n8n-workflow/TAG_TAXONOMY.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "TAG_TAXONOMYへのバックリンク"
+            }
+          },
+          {
+            "id": "6cc2f2fa270b3bda",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "dify-n8n-workflow/QUICK_START_EXCEL_SYNC.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "QUICK_START_EXCEL_SYNCからのアウトゴーイングリンク"
+            }
+          },
+          {
+            "id": "3dcb8f350986d943",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "タグ"
+            }
+          },
+          {
+            "id": "2435eb704e0cff77",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "dify-n8n-workflow/QUICK_START_EXCEL_SYNC.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "QUICK_START_EXCEL_SYNCのアウトライン"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:クイックスイッチャーを開く": false,
+      "graph:グラフビューを開く": false,
+      "canvas:新規キャンバスを作成": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "templates:テンプレートを挿入": false,
+      "command-palette:コマンドパレットを開く": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "fc5eaf64b5d23134",
+  "lastOpenFiles": [
+    "line-messaging/README.md",
+    "line-messaging/send-line-message.js",
+    "line-messaging",
+    "n8n-workspace/archive/dify-legacy/dify_note/unpublicnoteapi/api/note_unofficial/requirements.txt",
+    "n8n-workspace/archive/dify-legacy/dify_note/unpublicnoteapi/api/note_unofficial/Dockerfile",
+    "n8n-workspace/archive/dify-legacy/dify_note/unpublicnoteapi/api/note_unofficial/app.py",
+    "n8n-workspace/archive/dify-legacy/dify_note/unpublicnoteapi/api/note_login_cookies/requirements.txt",
+    "n8n-workspace/archive/dify-legacy/dify_note/unpublicnoteapi/api/note_login_cookies/app.py",
+    "n8n-workspace/archive/dify-legacy/dify_note/unpublicnoteapi/api/note_login_cookies/Dockerfile",
+    "n8n-workspace/archive/dify-legacy/dify_note/project/src/utils/constants.ts",
+    "n8n-workspace/archive/dify-legacy/dify_note/project/src/utils/conversationManager.ts",
+    "n8n-workspace/archive/dify-legacy/dify_note/unpublicnoteapi/sample_article.md",
+    "n8n-workspace/archive/dify-legacy/dify_note/unpublicnoteapi/sample.png",
+    "n8n-workspace/archive/dify-legacy/dify_note/unpublicnoteapi/README.md",
+    "n8n-workspace/docs/archive/status-reports/STATUS_REPORT_SESSION_6.md",
+    "n8n-workspace/docs/archive/status-reports/STATUS_REPORT_LATEST.md",
+    "n8n-workspace/docs/archive/status-reports/STATUS_REPORT.md",
+    "n8n-workspace/docs/archive/session-logs/SESSION_LOG.md",
+    "n8n-workspace/docs/archive/session-logs/SESSION_5_BRANCH.md",
+    "n8n-workspace/docs/archive/session-logs/SESSION_4_REPORT.md",
+    "n8n-workspace/docs/archive/old-documentation/VAULT_OPTIMIZATION_REPORT.md",
+    "n8n-workspace/docs/archive/old-documentation/TEST_REPORT.md",
+    "n8n-workspace/docs/archive/old-documentation/TAG_TAXONOMY.md",
+    "n8n-workspace/docs/archive/old-documentation/TAG_QUICK_REFERENCE.md",
+    "n8n-workspace/docs/archive/old-documentation/TAG_MIGRATION_REPORT.md",
+    "n8n-workspace/docs/archive/old-documentation/TAG_IMPLEMENTATION_SUMMARY.md",
+    "n8n-workspace/docs/archive/old-documentation/SYSTEM_DOCUMENTATION_V2.md",
+    "n8n-workspace/docs/archive/old-documentation/SYSTEM_DOCUMENTATION.md",
+    "n8n-workspace/docs/archive/old-documentation/STANDARDIZATION_SUMMARY.md",
+    "n8n-workspace/docs/archive/old-documentation/SETUP_NOW.md",
+    "n8n-workspace/docs/archive/old-documentation/READY_TO_TEST.md",
+    "n8n-workspace/docs/archive/old-documentation/N8N_VERSION_INFO.md",
+    "n8n-workspace/docs/archive/old-documentation/MOC - Project Overview.md",
+    "n8n-workspace/docs/archive/old-documentation/METADATA_GUIDE.md",
+    "n8n-workspace/docs/archive/old-documentation/FRONTMATTER_STANDARDIZATION_REPORT.md",
+    "n8n-workspace/docs/archive/old-documentation/CURATION_SUMMARY.md",
+    "n8n-workspace/docs/archive/old-documentation/CONTENT_CURATION_REPORT.md",
+    "dify-n8n-workflow/archive/dify-legacy/dify_note/unpublicnoteapi/sample.png",
+    "dify-workspace/unpublicnoteapi/sample.png"
+  ]
+}
